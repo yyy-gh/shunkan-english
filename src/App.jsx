@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { generateQuestions, evaluateAnswer } from './services/aiGenerator';
 import { getNextQuestion, recordAnswer, getWeakPoints, addGeneratedQuestions, getProgressStats } from './services/questionService';
 import './index.css';
+import LegalModal from './components/LegalModal';
 
 function App() {
   const [currentQ, setCurrentQ] = useState(null);
@@ -211,6 +212,8 @@ function App() {
           )}
         </div>
       </main>
+      
+      <LegalModal />
     </div>
   );
 }
