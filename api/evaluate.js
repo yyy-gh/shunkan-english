@@ -46,6 +46,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ isCorrect, message: text });
   } catch (error) {
     console.error("添削エラー:", error);
-    return res.status(500).json({ error: 'Failed to evaluate answer.' });
+    return res.status(500).json({ error: 'Failed to evaluate answer.', details: error.message || String(error) });
   }
 }
