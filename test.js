@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { fileURLToPath } from 'url';
 
-const apiKey = "AIzaSyBlGUk8lIjnqTzi6lASe6ChptOlXKVDh1U"; // user's old key or need to use their current env
+const apiKey = ""; // user's old key or need to use their current env
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 const prompt = `あなたはプロの英語教師です。ユーザーがCEFR B2レベルの「瞬間英作文」を行いました。
